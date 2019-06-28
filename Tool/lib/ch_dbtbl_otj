@@ -1,0 +1,46 @@
+#!/usr/bin/env ksh93
+ch_dbtbl_otj() {
+
+
+    load_params $@
+
+    fil=`echo "${1}" | cut -d"." -f1`
+    ite=`echo "${1}" | cut -d"." -f2`
+
+    tmp_nam=${2}
+    tmp_err=${3}
+
+
+    echo "ZZGDB" > $tmp_nam
+    echo "	S ER=0" >> $tmp_nam
+    echo "	S NODE=0" >> $tmp_nam
+    echo "	S PIECE=0" >> $tmp_nam
+    echo "	S FCOUNT=0" >> $tmp_nam
+    echo "	" >> $tmp_nam
+    echo "	I \$D(^DBTBL(\"SYSDEV\",1,\"$fil\",9,\"$ite\"))  D" >> $tmp_nam
+    echo "	. S NODE=\$P(^DBTBL(\"SYSDEV\",1,\"$fil\",9,\"$ite\"),\"|\",1)" >> $tmp_nam
+    echo "	. S PIECE=\$P(^DBTBL(\"SYSDEV\",1,\"$fil\",9,\"$ite\"),\"|\",21)" >> $tmp_nam
+    echo "	. S FCOUNT=\$P(^DBTBL(\"SYSDEV\",1,\"$fil\",9,\"$ite\"),\"|\",16)" >> $tmp_nam
+    echo "	E  S ER=1" >> $tmp_nam
+    echo "	" >> $tmp_nam
+    echo "	I ER=0 S RES=\"ZZRES=\"_FCOUNT_\"#\"_NODE_\"#\"_PIECE W RES,!" >> $tmp_nam
+    echo "	E  W \"ZZRES=1\",!" >> $tmp_nam
+    echo "	" >> $tmp_nam
+    echo "	Q" >> $tmp_nam
+
+
+
+        . ${TGTENV}/gtmenv > /dev/null 2>&1
+        log "Link $tmp_nam for $fil.$ite"
+
+        $gtm_dist/mumps -dir <<-EOF > $tmp_err 2>&1
+        zl "$tmp_nam"
+        D ^ZZGDB 
+EOF
+
+   grep $tmp_nam $tmp_err
+   [ $? -eq 1 ] || error_exit "$tmp_nam link error"
+
+
+
+}

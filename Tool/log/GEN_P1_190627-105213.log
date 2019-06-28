@@ -1,0 +1,30 @@
+[10:52:13] (18228) 
+[10:52:13] (18228) /home/pri/Tool/gen.sh -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 40
+[10:52:13] (18228) 
+[10:52:13] (18228) ----- settings -----
+[10:52:13] (18228) Working home: /home/pri/Tool
+[10:52:13] (18228) Source      : /home/pri/conf.txt
+[10:52:13] (18228) Target      : /home/pri
+[10:52:13] (18228) Phase       : GEN_P1
+[10:52:13] (18228) Phase dir   : /home/pri/Tool/phase/GEN_P1
+[10:52:13] (18228) First step    : 10
+[10:52:13] (18228) Last step     : 40
+[10:52:13] (18228) --------------------
+[10:52:13] (18228) Executing step 010 - 010_clen_up
+[10:52:13] (18228) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/010_clen_up -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 40
+[10:52:13] (18228) Executing step 020 - 020_parse_conf
+[10:52:13] (18228) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/020_parse_conf -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 40
+[10:52:13] (18254) Check config file /home/pri/conf.txt
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BAL
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACN
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACCTNAME
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.NAM
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.XNAME
+[10:52:13] (18254) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for EFTPAY.RELREFNO
+[10:52:13] (18228) Executing step 030 - 030_gen_trg_def
+[10:52:13] (18228) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/030_gen_trg_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 40
+[10:52:13] (18471) Gen triggers definition
+[10:52:14] (18228) Executing step 040 - 040_gen_rou_def
+[10:52:14] (18228) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/040_gen_rou_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 40
+[10:52:14] (18537) Gen routines definition
+[10:52:14] (18228) Phase GEN_P1 finished with step 40.

@@ -1,0 +1,29 @@
+#!/usr/bin/env ksh93
+up_keys() {
+
+# upravi retezec s klici na radek pro W v MUMPSu napr:
+# "CID" -> "CID="_CID_
+# "CID,SEQ" -> "CID="_CID_,"SEQ="_SEQ_
+
+    xkeys="${1}"
+
+    pod="_"
+    XRES=""
+
+    echo $xkeys | grep "," > /dev/null
+    if [ $? -eq 1 ]
+     then
+      #jeden klic
+      xkey=`echo $keys | sed 's/ //g'`
+      XRES="\"$xkey=\"$pod$xkey$pod"
+     else
+      #vic klicu
+      for okey in `echo $xkeys | sed s'/,/ /'g`
+       do
+        XRES=`echo "$XRES,\"$okey=\"$pod$okey$pod"`
+       done
+    fi
+
+    echo $XRES
+
+}

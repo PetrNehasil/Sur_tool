@@ -1,0 +1,32 @@
+[14:43:40] (28683) 
+[14:43:40] (28683) /home/pri/Tool/gen.sh -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:43:40] (28683) 
+[14:43:40] (28683) ----- settings -----
+[14:43:40] (28683) Working home: /home/pri/Tool
+[14:43:40] (28683) Source      : /home/pri/conf.txt
+[14:43:40] (28683) Target      : /home/pri
+[14:43:40] (28683) Phase       : GEN_P1
+[14:43:40] (28683) Phase dir   : /home/pri/Tool/phase/GEN_P1
+[14:43:40] (28683) First step    : 10
+[14:43:40] (28683) Last step     : 50
+[14:43:40] (28683) --------------------
+[14:43:40] (28683) Executing step 010 - 010_clen_up
+[14:43:40] (28683) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/010_clen_up -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:43:40] (28683) Executing step 020 - 020_parse_conf
+[14:43:40] (28683) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/020_parse_conf -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:43:40] (28709) Check config file /home/pri/conf.txt
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BAL
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACN
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACCTNAME
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.NAM
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.XNAME
+[14:43:40] (28709) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for EFTPAY.RELREFNO
+[14:43:40] (28683) Executing step 030 - 030_gen_trg_def
+[14:43:40] (28683) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/030_gen_trg_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:43:40] (28926) Gen triggers definition
+[14:43:40] (28683) Executing step 040 - 040_gen_rou_def
+[14:43:40] (28683) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/040_gen_rou_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:43:40] (28992) Gen routines definition
+[14:43:40] (28992) == ERROR ==
+[14:43:40] (28992) Divna dalsi data, ze by chyba v programu?
+[14:43:40] (28683) === ERROR === Step 040_gen_rou_def failed with status 1

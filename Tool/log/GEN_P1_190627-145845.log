@@ -1,0 +1,33 @@
+[14:58:45] (32047) 
+[14:58:45] (32047) /home/pri/Tool/gen.sh -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:45] (32047) 
+[14:58:45] (32047) ----- settings -----
+[14:58:45] (32047) Working home: /home/pri/Tool
+[14:58:45] (32047) Source      : /home/pri/conf.txt
+[14:58:45] (32047) Target      : /home/pri
+[14:58:45] (32047) Phase       : GEN_P1
+[14:58:45] (32047) Phase dir   : /home/pri/Tool/phase/GEN_P1
+[14:58:45] (32047) First step    : 10
+[14:58:45] (32047) Last step     : 50
+[14:58:45] (32047) --------------------
+[14:58:45] (32047) Executing step 010 - 010_clen_up
+[14:58:45] (32047) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/010_clen_up -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:45] (32047) Executing step 020 - 020_parse_conf
+[14:58:45] (32047) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/020_parse_conf -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:45] (32073) Check config file /home/pri/conf.txt
+[14:58:45] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BAL
+[14:58:45] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACN
+[14:58:45] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACCTNAME
+[14:58:45] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.NAM
+[14:58:46] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.XNAME
+[14:58:46] (32073) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for EFTPAY.RELREFNO
+[14:58:46] (32047) Executing step 030 - 030_gen_trg_def
+[14:58:46] (32047) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/030_gen_trg_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:46] (32290) Gen triggers definition
+[14:58:46] (32047) Executing step 040 - 040_gen_rou_def
+[14:58:46] (32047) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/040_gen_rou_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:46] (32356) Gen routines definition
+[14:58:46] (32047) Executing step 050 - 050_gen_pipe_maker
+[14:58:46] (32047) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/050_gen_pipe_maker -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[14:58:46] (32455) Gen scripts
+[14:58:46] (32047) Phase GEN_P1 finished with step 50.

@@ -1,0 +1,9 @@
+#!/usr/bin/env ksh93
+log() {
+	stamp="$(date +%H:%M:%S)"
+	echo "[${stamp}] ($$) ${@}"
+	if [ "x${WOR_LOG}" != "x" ] ; 
+	 then
+		echo "[${stamp}] ($$) ${@}" >> ${WOR_LOG} || exit 1
+	fi
+}

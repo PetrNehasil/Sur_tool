@@ -1,0 +1,31 @@
+[10:20:57] (13490) 
+[10:20:57] (13490) /home/pri/Tool/gen.sh -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -r 125 -b 10 -e 40
+[10:20:57] (13490) 
+[10:20:57] (13490) ----- settings -----
+[10:20:57] (13490) Working home: /home/pri/Tool
+[10:20:57] (13490) Source      : /home/pri/conf.txt
+[10:20:57] (13490) Target      : /home/pri
+[10:20:57] (13490) Phase       : GEN_P1
+[10:20:57] (13490) Phase dir   : /home/pri/Tool/phase/GEN_P1
+[10:20:57] (13490) First step    : 10
+[10:20:57] (13490) Last step     : 40
+[10:20:57] (13490) --------------------
+[10:20:57] (13490) Executing step 010 - 010_clen_up
+[10:20:57] (13490) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/010_clen_up -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -r 125 -b 10 -e 40
+[10:20:57] (13490) Executing step 020 - 020_parse_conf
+[10:20:57] (13490) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/020_parse_conf -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -r 125 -b 10 -e 40
+[10:20:57] (13516) Check config file /home/pri/conf.txt
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BAL
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACN
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BALAVL
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACCTNAME
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.NAM
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.XNAME
+[10:20:57] (13516) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for EFTPAY.RELREFNO
+[10:20:58] (13490) Executing step 030 - 030_gen_trg_def
+[10:20:58] (13490) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/030_gen_trg_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -r 125 -b 10 -e 40
+[10:20:58] (13751) Gen triggers definition
+[10:20:58] (13490) Executing step 040 - 040_gen_rou_def
+[10:20:58] (13490) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/040_gen_rou_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -r 125 -b 10 -e 40
+[10:20:58] (13817) Gen routines definition
+[10:20:58] (13490) Phase GEN_P1 finished with step 40.

@@ -1,0 +1,9 @@
+#!/usr/bin/env ksh93
+error_exit() {
+	typeset code=${2:-1}
+	if [ ${code} -ne 0 ]; then
+		log "== ERROR =="
+		log "${1}"
+		exit ${code}
+	fi
+}

@@ -1,0 +1,35 @@
+[10:56:02] (19904) 
+[10:56:02] (19904) /home/pri/Tool/gen.sh -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:02] (19904) 
+[10:56:02] (19904) ----- settings -----
+[10:56:02] (19904) Working home: /home/pri/Tool
+[10:56:02] (19904) Source      : /home/pri/conf.txt
+[10:56:02] (19904) Target      : /home/pri
+[10:56:02] (19904) Phase       : GEN_P1
+[10:56:02] (19904) Phase dir   : /home/pri/Tool/phase/GEN_P1
+[10:56:02] (19904) First step    : 10
+[10:56:02] (19904) Last step     : 50
+[10:56:02] (19904) --------------------
+[10:56:02] (19904) Executing step 010 - 010_clen_up
+[10:56:02] (19904) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/010_clen_up -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:02] (19904) Executing step 020 - 020_parse_conf
+[10:56:02] (19904) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/020_parse_conf -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:02] (19930) Check config file /home/pri/conf.txt
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.BAL
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACN
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for DEP.ACCTNAME
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.NAM
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for CIF.XNAME
+[10:56:02] (19930) Link /home/pri/Tool/gener/dbtbl_tmp/ZZGDB.m for EFTPAY.RELREFNO
+[10:56:03] (19904) Executing step 030 - 030_gen_trg_def
+[10:56:03] (19904) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/030_gen_trg_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:03] (20147) Gen triggers definition
+[10:56:03] (19904) Executing step 040 - 040_gen_rou_def
+[10:56:03] (19904) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/040_gen_rou_def -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:03] (20213) Gen routines definition
+[10:56:03] (19904) Executing step 050 - 050_gen_pipe_maker
+[10:56:03] (19904) /bin/ksh93  /home/pri/Tool/phase/GEN_P1/050_gen_pipe_maker -p GEN_P1 -s /home/pri/conf.txt -t /home/pri -d /tmp -b 10 -e 50
+[10:56:03] (20284) Gen scripts
+[10:56:03] (20284) == ERROR ==
+[10:56:03] (20284) Cannot create /tmp/ZP312
+[10:56:03] (19904) === ERROR === Step 050_gen_pipe_maker failed with status 1
